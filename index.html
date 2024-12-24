@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Second HW on JS course!</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images/icons-16.png"
+    />
+    <style>
+      body {
+        font-family: "Courier New", Courier, monospace;
+        background-color: goldenrod;
+        margin: 0;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 38px;
+        color: brown;
+      }
+
+      .description {
+        font-size: 20px;
+        font-weight: 600;
+        max-width: 1000px;
+      }
+
+      section {
+        margin: 20px;
+        padding: 20px;
+      }
+
+      .wrapper {
+        display: flex;
+        gap: 40px;
+      }
+
+      .task-header {
+        font-size: 18px;
+        margin: 8px 0;
+        font-weight: 600;
+      }
+
+      .task-list {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 4px;
+        margin: 4px;
+        gap: 16px;
+      }
+
+      .task-wrapper {
+        border: 4px solid #000;
+        border-radius: 16px;
+        padding: 8px;
+        max-width: 1000px;
+      }
+
+      .task-item {
+        border: 2px solid #000;
+        border-radius: 8px;
+        padding: 12px 12px;
+      }
+
+      .task-description {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 14px;
+        margin-left: 24px;
+      }
+
+      .first-task-arg-field {
+        border-radius: 4px;
+        border: 1px solid;
+        background-color: transparent;
+        margin-top: 8px;
+        padding: 4px 8px;
+        font-size: 16px;
+        height: 24px;
+        outline: none;
+        width: 80px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 10px;
+      }
+      .second-task-arg-field {
+        border-radius: 4px;
+        border: 1px solid;
+        background-color: transparent;
+        margin-top: 8px;
+        padding: 4px 8px;
+        font-size: 16px;
+        height: 24px;
+        outline: none;
+        width: auto;
+        margin-top: 8px;
+      }
+
+      .get-first-task-result {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 16px;
+        background-color: brown;
+        color: gold;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin: 0 auto;
+        padding: 8px 16px;
+      }
+      .get-first-task-result:hover {
+        background-color: rgb(76, 19, 19);
+      }
+      .tasc-form {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+      }
+      .first-task-res-field {
+        background-color: transparent;
+        border-radius: 4px;
+        border: 2px solid;
+        margin-top: 8px;
+        padding: 4px 8px;
+        font-size: 16px;
+        height: 24px;
+        outline: none;
+        width: 400px;
+      }
+      .field-container {
+        display: flex;
+        gap: 20px;
+        align-items: flex-end;
+        justify-content: center;
+      }
+
+      .tasc-field-label {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+        display: block;
+      }
+
+      .width-large {
+        width: 500px;
+        display: block;
+        align-items: center;
+      }
+
+      .width-small {
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Друга домашка по JS!</h1>
+    </header>
+    <section class="wrapper">
+      <div>
+        <img
+          src="./images/Coder-Transparent-Image.png"
+          alt="Кодер"
+          width="400"
+        />
+      </div>
+      <div class="content">
+        <p class="description">
+          На цій сторінці ви можете побачити результати роботи функцій, які
+          необхідно було оголосити за умовами домашнього завдання.
+        </p>
+        <div class="task-wrapper">
+          <ul class="task-list">
+            <li class="task-item">
+              <p class="task-header">Перше завдання:</p>
+              <p class="task-description">
+                Оголоси функцію makeTransaction(quantity, pricePerDroid,
+                customerCredits), яка складає та повертає повідомлення про
+                купівлю ремонтних дроїдів. Вона оголошує три параметри, значення
+                яких будуть задаватися під час її виклику:<br />
+                • quantity — кількість замовлених дроїдів <br />• pricePerDroid
+                — ціна одного дроїда <br />• customerCredits — сума коштів на
+                рахунку клієнта<br />
+                Доповни функцію таким чином:<br />Оголоси змінну для зберігання
+                загальної суми замовлення (загальна вартість усіх замовлених
+                дроїдів) і задай їй вираз розрахунку цієї суми. Додай перевірку,
+                чи зможе клієнт оплатити замовлення: якщо сума до сплати
+                перевищує кількість кредитів на рахунку клієнта, функція має
+                повертати рядок "Insufficient funds!" в іншому випадку функція
+                має повертати рядок "You ordered &lt;quantity&gt; droids worth
+                &lt;totalPrice&gt; credits!", де &lt;quantity&gt; це кількість
+                замовлених дроїдів, а &lt;totalPrice&gt; це їх загальна
+                вартість.
+              </p>
+              <form class="tasc-form">
+                <div class="field-container">
+                  <label class="tasc-field-label"
+                    >Введіть кількість дроїдів:
+                    <input
+                      class="first-task-arg-field"
+                      type="number"
+                      name="quantity"
+                      id="quantity"
+                  /></label>
+                  <label class="tasc-field-label"
+                    >Введіть ціну за одиницю:
+                    <input
+                      class="first-task-arg-field second-tasc-arg-field"
+                      type="number"
+                      name="pricePerDroid"
+                      id="pricePerDroid"
+                  /></label>
+                  <label class="tasc-field-label">
+                    Введіть суму коштів на рахунку:
+                    <input
+                      class="first-task-arg-field second-tasc"
+                      type="number"
+                      name="customerCreditsCount"
+                      id="customerCreditsCount"
+                  /></label>
+                </div>
+                <button
+                  type="button"
+                  id="first-task-res-button"
+                  class="get-first-task-result"
+                >
+                  &gt;&gt; Дивитись результат: &lt;&lt;
+                </button>
+                <label class="tasc-field-label"
+                  >Результат виконання функції:
+                  <input
+                    type="text"
+                    name="first-task-result-field"
+                    id="first-task-result-field"
+                    class="first-task-res-field"
+                /></label>
+              </form>
+            </li>
+            <li class="task-item">
+              <p class="task-header">Друге завдання:</p>
+              <p class="task-description">
+                Оголоси функцію formatMessage(message, maxLength), яка приймає
+                рядок (параметр message) та перевіряє його довжину відповідно до
+                заданої максимальної довжини (параметр maxLength). Доповни код
+                функції таким чином, що:
+                <br />• Якщо довжина рядка дорівнює або менша за maxLength, то
+                функція повертає початковий рядок без змін. <br />• Якщо довжина
+                перевищує maxLength, то функція обрізає рядок до maxLength
+                символів, додає трикрапку "..." в кінці та повертає обрізану
+                версію. <br />Візьми код нижче і встав після оголошення своєї
+                функції для перевірки коректності її роботи. У консоль будуть
+                виведені результати її роботи.
+              </p>
+              <form class="tasc-form">
+                <div class="field-container">
+                  <label class="tasc-field-label"
+                    >Введіть повідомлення (message):
+                    <input
+                      class="second-task-arg-field width-large"
+                      type="text"
+                      name="country"
+                      id="country"
+                  /></label>
+                  <label class="tasc-field-label"
+                    >Введіть довжину рядка:
+                    <input
+                      class="second-task-arg-field width-small"
+                      type="number"
+                      name="price"
+                      id="price"
+                  /></label>
+                </div>
+                <button
+                  type="button"
+                  id="second-task-res-button"
+                  class="get-first-task-result"
+                >
+                  &gt;&gt; Дивитись результат: &lt;&lt;
+                </button>
+                <label class="tasc-field-label"
+                  >Результат виконання функції:
+                  <input
+                    type="text"
+                    name="second-task-result-field"
+                    id="second-task-result-field"
+                    class="first-task-res-field"
+                /></label>
+              </form>
+            </li>
+            <li class="task-item">
+              <p class="task-header">Третє завдання:</p>
+              <p class="task-description">
+                Функція checkForSpam(message) приймає рядок (параметр message),
+                перевіряє його на вміст заборонених слів spam і sale, і повертає
+                результат перевірки. Слова в рядку параметра message можуть бути
+                в довільному регістрі, наприклад SPAM або sAlE. <br />Доповни
+                код функції таким чином, що: <br />Якщо знайдено заборонене
+                слово (spam або sale), то функція повертає буль true <br />Якщо
+                в рядку відсутні заборонені слова, функція повертає буль false
+                <br />Візьми код нижче і встав після оголошення своєї функції
+                для перевірки коректності її роботи. У консоль будуть виведені
+                результати її роботи.
+              </p>
+              <form class="tasc-form">
+                <div class="field-container">
+                  <label class="tasc-field-label"
+                    >Введіть повідомлення:
+                    <input
+                      class="second-task-arg-field width-large"
+                      type="text"
+                      name="third-tasc-message"
+                      id="third-tasc-message"
+                  /></label>
+                </div>
+                <button
+                  type="button"
+                  id="third-task-res-button"
+                  class="get-first-task-result"
+                >
+                  &gt;&gt; Дивитись результат: &lt;&lt;
+                </button>
+                <label class="tasc-field-label"
+                  >Результат виконання функції:
+                  <input
+                    type="text"
+                    name="third-task-result-field"
+                    id="third-task-result-field"
+                    class="first-task-res-field"
+                /></label>
+              </form>
+            </li>
+            <li class="task-item">
+              <p class="task-header">Четверте завдання:</p>
+              <p class="task-description">
+                Оголоси функцію getShippingCost(country), яка повинна перевіряти
+                можливість доставки товару в країну користувача (параметр
+                country) і повертати повідомлення про результат. Обов'язково
+                використовуй інструкцію switch. Формат рядка, що повертається
+                "Shipping to &lt;country&gt; will cost &lt;price&gt; credits",
+                де замість &lt;country&gt; і &lt;price&gt; необхідно підставити
+                відповідні значення. Список країн і вартість доставки:<br />
+
+                • China — 100 кредитів<br />
+                • Chile — 250 кредитів<br />
+                • Australia — 170 кредитів<br />
+                • Jamaica — 120 кредитів<br />
+                Зі списку видно, що доставка можлива не скрізь. Якщо зазначена
+                країна відсутня у списку, то функція повинна повернути рядок
+                "Sorry, there is no delivery to your country".
+              </p>
+              <form class="tasc-form">
+                <div class="field-container">
+                  <label class="tasc-field-label"
+                    >Введіть назву країни:
+                    <input
+                      class="second-task-arg-field width-large"
+                      type="text"
+                      name="four-input-label"
+                      id="four-input-label"
+                    />
+                  </label>
+                </div>
+                <button
+                  type="button"
+                  id="four-task-res-button"
+                  class="get-first-task-result"
+                >
+                  &gt;&gt; Дивитись результат: &lt;&lt;
+                </button>
+                <label class="tasc-field-label"
+                  >Результат виконання функції:
+                  <input
+                    type="text"
+                    name="four-task-result-field"
+                    id="four-task-result-field"
+                    class="first-task-res-field"
+                /></label>
+              </form>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <script src="./js/task-1.js"></script>
+    <script src="./js/task-2.js"></script>
+    <script src="./js/task-3.js"></script>
+    <script src="./js/task-4.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
