@@ -142,6 +142,7 @@
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         text-align: center;
         display: block;
+        margin: 0 auto;
       }
 
       .width-large {
@@ -264,33 +265,41 @@
                     type="text"
                     name="second-task-result-field"
                     id="second-task-result-field"
-                    class="first-task-res-field"
+                    class="first-task-res-field width-large"
                 /></label>
               </form>
             </li>
             <li class="task-item">
               <p class="task-header">Третє завдання:</p>
               <p class="task-description">
-                Функція checkForSpam(message) приймає рядок (параметр message),
-                перевіряє його на вміст заборонених слів spam і sale, і повертає
-                результат перевірки. Слова в рядку параметра message можуть бути
-                в довільному регістрі, наприклад SPAM або sAlE. <br />Доповни
-                код функції таким чином, що: <br />Якщо знайдено заборонене
-                слово (spam або sale), то функція повертає буль true <br />Якщо
-                в рядку відсутні заборонені слова, функція повертає буль false
-                <br />Візьми код нижче і встав після оголошення своєї функції
-                для перевірки коректності її роботи. У консоль будуть виведені
-                результати її роботи.
+                Напиши функцію filterArray(numbers, value), яка приймає масив
+                чисел (numbers) та значення (value) як параметри. Функція
+                повинна повертати новий масив лише тих чисел із масиву numbers,
+                які більші за значення value. <br /><br />Усередині функції:
+                <br />• Створи порожній масив, у який будеш додавати підходящі
+                числа. <br />• Використай цикл для ітерації кожного елемента
+                масиву numbers. <br />• Використовуй умовний оператор if
+                усередині циклу для перевірки кожного елемента і додавання до
+                свого масиву. <br />• Поверни свій новий масив з підходящими
+                числами як результат.
               </p>
               <form class="tasc-form">
                 <div class="field-container">
                   <label class="tasc-field-label"
-                    >Введіть повідомлення:
+                    >Введіть елементи масиву:
                     <input
                       class="second-task-arg-field width-large"
                       type="text"
                       name="third-tasc-message"
                       id="third-tasc-message"
+                  /></label>
+                  <label class="tasc-field-label"
+                    >Введіть число:
+                    <input
+                      class="second-task-arg-field"
+                      type="number"
+                      name="third-tasc-number"
+                      id="third-tasc-number"
                   /></label>
                 </div>
                 <button
@@ -306,54 +315,6 @@
                     type="text"
                     name="third-task-result-field"
                     id="third-task-result-field"
-                    class="first-task-res-field"
-                /></label>
-              </form>
-            </li>
-            <li class="task-item">
-              <p class="task-header">Четверте завдання:</p>
-              <p class="task-description">
-                Оголоси функцію getShippingCost(country), яка повинна перевіряти
-                можливість доставки товару в країну користувача (параметр
-                country) і повертати повідомлення про результат. Обов'язково
-                використовуй інструкцію switch. Формат рядка, що повертається
-                "Shipping to &lt;country&gt; will cost &lt;price&gt; credits",
-                де замість &lt;country&gt; і &lt;price&gt; необхідно підставити
-                відповідні значення. Список країн і вартість доставки:<br />
-
-                • China — 100 кредитів<br />
-                • Chile — 250 кредитів<br />
-                • Australia — 170 кредитів<br />
-                • Jamaica — 120 кредитів<br />
-                Зі списку видно, що доставка можлива не скрізь. Якщо зазначена
-                країна відсутня у списку, то функція повинна повернути рядок
-                "Sorry, there is no delivery to your country".
-              </p>
-              <form class="tasc-form">
-                <div class="field-container">
-                  <label class="tasc-field-label"
-                    >Введіть назву країни:
-                    <input
-                      class="second-task-arg-field width-large"
-                      type="text"
-                      name="four-input-label"
-                      id="four-input-label"
-                    />
-                  </label>
-                </div>
-                <button
-                  type="button"
-                  id="four-task-res-button"
-                  class="get-first-task-result"
-                >
-                  &gt;&gt; Дивитись результат: &lt;&lt;
-                </button>
-                <label class="tasc-field-label"
-                  >Результат виконання функції:
-                  <input
-                    type="text"
-                    name="four-task-result-field"
-                    id="four-task-result-field"
                     class="first-task-res-field"
                 /></label>
               </form>
