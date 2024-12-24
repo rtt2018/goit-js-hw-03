@@ -9,12 +9,18 @@ firstResButton.addEventListener("click", () => {
 // Друге завдання
 
 const secondResButton = document.getElementById("second-task-res-button");
-const message = document.getElementById("country");
-const maxLength = document.getElementById("price");
+const firstArray = document.getElementById("firstArrayField");
+const secondArray = document.getElementById("secondArrayField");
+const maxLength = document.getElementById("maxLengthArray");
 const resSecondField = document.getElementById("second-task-result-field");
 
 secondResButton.addEventListener("click", () => {
-  resSecondField.value = formatMessage(message.value, maxLength.value);
+  console.log(firstArray.value.replace(/[\[\],"]/g, "").split(" "));
+  resSecondField.value = makeArray(
+    firstArray.value.replace(/[\[\],"]/g, "").split(" "),
+    secondArray.value.replace(/[\[\],"]/g, "").split(" "),
+    maxLength.value
+  ).join(", ");
 });
 
 // Третє завдання

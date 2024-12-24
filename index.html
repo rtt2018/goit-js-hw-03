@@ -135,6 +135,7 @@
         gap: 20px;
         align-items: flex-end;
         justify-content: center;
+        flex-wrap: wrap;
       }
 
       .tasc-field-label {
@@ -214,35 +215,40 @@
             <li class="task-item">
               <p class="task-header">Друге завдання:</p>
               <p class="task-description">
-                Оголоси функцію formatMessage(message, maxLength), яка приймає
-                рядок (параметр message) та перевіряє його довжину відповідно до
-                заданої максимальної довжини (параметр maxLength). Доповни код
-                функції таким чином, що:
-                <br />• Якщо довжина рядка дорівнює або менша за maxLength, то
-                функція повертає початковий рядок без змін. <br />• Якщо довжина
-                перевищує maxLength, то функція обрізає рядок до maxLength
-                символів, додає трикрапку "..." в кінці та повертає обрізану
-                версію. <br />Візьми код нижче і встав після оголошення своєї
-                функції для перевірки коректності її роботи. У консоль будуть
-                виведені результати її роботи.
+                Напиши функцію під назвою makeArray, яка приймає три параметри:
+                firstArray (масив), secondArray (масив) і maxLength (число).
+                Функція повинна створювати новий масив, який містить усі
+                елементи з firstArray, а потім усі елементи з secondArray.<br />
+                <br />• Якщо кількість елементів у новому масиві перевищує
+                maxLength, функція повинна повернути копію масиву з довжиною
+                maxLength елементів. <br />• В іншому випадку функція повинна
+                повернути весь новий масив.
               </p>
               <form class="tasc-form">
                 <div class="field-container">
                   <label class="tasc-field-label"
-                    >Введіть повідомлення (message):
+                    >Введіть перший масив:
                     <input
                       class="second-task-arg-field width-large"
                       type="text"
-                      name="country"
-                      id="country"
+                      name="firstArrayField"
+                      id="firstArrayField"
                   /></label>
                   <label class="tasc-field-label"
-                    >Введіть довжину рядка:
+                    >Введіть другий масив:
+                    <input
+                      class="second-task-arg-field width-large"
+                      type="text"
+                      name="secondArrayField"
+                      id="secondArrayField"
+                  /></label>
+                  <label class="tasc-field-label"
+                    >Введіть довжину підсумкового масиву:
                     <input
                       class="second-task-arg-field width-small"
                       type="number"
-                      name="price"
-                      id="price"
+                      name="maxLengthArray"
+                      id="maxLengthArray"
                   /></label>
                 </div>
                 <button
@@ -359,7 +365,6 @@
     <script src="./js/task-1.js"></script>
     <script src="./js/task-2.js"></script>
     <script src="./js/task-3.js"></script>
-    <script src="./js/task-4.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>
