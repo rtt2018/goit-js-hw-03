@@ -176,49 +176,22 @@
             <li class="task-item">
               <p class="task-header">Перше завдання:</p>
               <p class="task-description">
-                Оголоси функцію makeTransaction(quantity, pricePerDroid,
-                customerCredits), яка складає та повертає повідомлення про
-                купівлю ремонтних дроїдів. Вона оголошує три параметри, значення
-                яких будуть задаватися під час її виклику:<br />
-                • quantity — кількість замовлених дроїдів <br />• pricePerDroid
-                — ціна одного дроїда <br />• customerCredits — сума коштів на
-                рахунку клієнта<br />
-                Доповни функцію таким чином:<br />Оголоси змінну для зберігання
-                загальної суми замовлення (загальна вартість усіх замовлених
-                дроїдів) і задай їй вираз розрахунку цієї суми. Додай перевірку,
-                чи зможе клієнт оплатити замовлення: якщо сума до сплати
-                перевищує кількість кредитів на рахунку клієнта, функція має
-                повертати рядок "Insufficient funds!" в іншому випадку функція
-                має повертати рядок "You ordered &lt;quantity&gt; droids worth
-                &lt;totalPrice&gt; credits!", де &lt;quantity&gt; це кількість
-                замовлених дроїдів, а &lt;totalPrice&gt; це їх загальна
-                вартість.
+                Напиши функцію slugify(title), яка приймає заголовок статті,
+                параметр title і повертає slug, створений із цього рядка.<br />
+                <br />• Значенням параметра title будуть рядки, слова яких
+                розділені лише пробілами. <br />• Усі символи slug повинні бути
+                в нижньому регістрі. <br />• Усі слова slug повинні бути
+                розділені тире.
               </p>
               <form class="tasc-form">
                 <div class="field-container">
-                  <label class="tasc-field-label"
-                    >Введіть кількість дроїдів:
-                    <input
-                      class="first-task-arg-field"
-                      type="number"
-                      name="quantity"
-                      id="quantity"
-                  /></label>
-                  <label class="tasc-field-label"
-                    >Введіть ціну за одиницю:
-                    <input
-                      class="first-task-arg-field second-tasc-arg-field"
-                      type="number"
-                      name="pricePerDroid"
-                      id="pricePerDroid"
-                  /></label>
                   <label class="tasc-field-label">
-                    Введіть суму коштів на рахунку:
+                    Введіть повідомлення, яке треба перетворити на slug:
                     <input
-                      class="first-task-arg-field second-tasc"
-                      type="number"
-                      name="customerCreditsCount"
-                      id="customerCreditsCount"
+                      class="first-task-arg-field second-tasc width-large"
+                      type="text"
+                      name="messageInputField"
+                      id="messageInputField"
                   /></label>
                 </div>
                 <button
